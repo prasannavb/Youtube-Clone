@@ -1,0 +1,202 @@
+.header
+{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+
+.logo
+{
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.youtubelogo
+{
+    width:50%;
+    cursor: pointer;
+}
+.youtubelogo-phone
+{
+    display: none;
+}
+
+
+.logo i
+{
+    align-self: center;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.search-bar
+{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.search
+{
+    width: 90%;
+    padding: 1.5%;
+    height: fit-content;
+    align-self: center;
+    font-size: medium;
+}
+.search-bar button
+{
+    width: fit-content;
+    height: fit-content;
+    align-self: center;
+    padding:1.7%;
+    cursor: pointer;
+}
+.search:focus,.search-bar button:hover
+{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.fa-microphone
+{
+    align-self: center;
+    margin-left: 1%;
+    font-size: larger;
+    border-radius: 50px; 
+    padding: 2%;
+    cursor: pointer;
+   
+}
+.fa-microphone:hover,.fa-bell:hover,.fa-video:hover,.fa-user:hover
+{
+    background-color: rgba(210, 206, 206, 0.818);
+    border-radius: 50px; 
+    padding: 2%;
+
+}
+
+.icons
+{
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.icons i
+{
+    margin-left:10%;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.video-tooltip,.bell-tooltip,.user-tooltip
+{
+    background-color: rgba(11, 10, 10, 0.723);
+    color: white;
+    padding: 5px;
+    font-size:15px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    border-radius: 2px;
+    z-index: 1;
+    position: absolute;
+    display: none;
+}
+.video-tooltip
+{
+    top:10%;
+    right:4%;
+}
+.bell-tooltip
+{
+    top:10%;
+    right:1%;
+}
+.user-tooltip
+{
+    top:10%;
+    right:0%;
+}
+
+@media (min-width:900px)
+{
+
+.fa-video:hover .video-tooltip 
+{
+    display: flex;
+
+}
+.fa-bell:hover .bell-tooltip
+{
+    display: flex;
+
+}
+
+.fa-user:hover .user-tooltip
+{
+    display: flex;
+}
+}
+
+@media (min-width:325px) and (max-width:900px)
+{
+    .icons
+    {
+        width: 20%;
+    }
+    .search-bar
+    {
+        width: 30%;
+    }
+.video-tooltip,.bell-tooltip,.user-tooltip
+
+{
+    display: none;
+}
+    
+.icons i
+{
+    font-size: larger;
+}
+.logo i
+{
+    font-size: larger;
+}
+
+}
+
+@media (max-width:768px)
+{
+    .youtubelogo-phone
+    {
+        display: block;
+        width: 75%;
+        height: 50%;
+        align-self: center;
+        cursor: pointer;
+    }
+    .youtubelogo
+    {
+        display: none;
+    }
+}
+
+@media (max-width:425px)
+{
+    .youtubelogo-phone
+    {
+        width: 100%;
+    }
+}
